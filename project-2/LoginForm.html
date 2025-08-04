@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Login Form</title>
+    <style>
+        /* * 1. Universal Box Model & Basic Setup
+         *
+         * - Use box-sizing: border-box; to make the box model predictable.
+         * This ensures that the specified width (350px) includes padding and border.
+         * - Basic reset for margin and padding on all elements.
+        */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+         * 2. Centering the Login Card (Vertical & Horizontal)
+         *
+         * - Use Flexbox on the body to easily center its direct child.
+         * - min-height: 100vh; ensures the body takes up the full viewport height.
+         * - justify-content: center; aligns the item horizontally.
+         * - align-items: center; aligns the item vertically.
+         * - A subtle background color is added to the page itself.
+        */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /*
+         * 3. The Login Card/Container
+         *
+         * - width: 350px; as required.
+         * - padding: 20px; for internal breathing room.
+         * - border: 1px solid #ddd; for a subtle outline.
+         * - border-radius: 10px; for soft, rounded corners.
+         * - background-color: #ffffff; to make the card stand out.
+         * - box-shadow: provides a soft, floating effect.
+        */
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /*
+         * 4. Form Elements Styling
+        */
+
+        /* Center the main heading */
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px; /* Space below the heading */
+            color: #333;
+        }
+
+        /* Container for each label-input group */
+        .form-group {
+            margin-bottom: 15px; /* Consistent spacing between form groups */
+        }
+
+        .form-group label {
+            display: block; /* Make label take its own line */
+            margin-bottom: 5px; /* Space between label and input */
+            font-weight: 600;
+            color: #555;
+        }
+
+        /* Style for text inputs (Email and Password) */
+        .form-group input {
+            width: 100%; /* Make input span the full width of its container */
+            padding: 10px; /* Internal padding for comfortable typing */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Style for the submit button */
+        .submit-btn {
+            width: 100%; /* Make button span the full width */
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer; /* Change cursor to a pointer on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3; /* Darken button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The main login card container -->
+    <div class="login-container">
+        <!-- Login Heading -->
+        <h2>Login</h2>
+        
+        <!-- The Form -->
+        <form action="#" method="POST">
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
